@@ -60,8 +60,23 @@ object bateriaAntiaerea{
 }
 
 object contenedorPortuario{
-    
+    method contenedor() = []
+    method peligrosidad(){
+        if( contenedor.isEmpty() ){
+            return 0
+        }
+        else {
+            return contenedor.max({ objeto => objeto.peligrosidad()})
+        }
+    }
+    method peso(){
+        return 100 + contenedor.filter( c => c.peso())
+    }
 }
 
+object residuoRadiactivo{
+    var pesoActual = 0
 
-
+    method peso = pesoActual
+    method pelo
+}
