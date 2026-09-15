@@ -78,5 +78,19 @@ object residuoRadiactivo{
     var pesoActual = 0
 
     method peso = pesoActual
-    method pelo
+    method peligrosidad = 200
 }
+
+object embalajeDeSeguridad{
+    var cobertura = []
+
+    method peso(){
+        return cobertura.first([c => c.peso()])
+    }
+    method peligrosidad(){
+        return cobertura.first({c => c.peligrosidad() % 2 })
+}
+
+
+
+
