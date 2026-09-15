@@ -17,5 +17,7 @@ object camion {
     method PesaTal(valor){
         return cargas.any({cosa => cosa.peso() == valor})
     }
-    method 
+    method elPrimeroEsPeligroso(nivelDePeligrosidad){
+        return cargas.find({cosa => cosa.peligrosidad() == nivelDePeligrosidad})
+    }
 }
