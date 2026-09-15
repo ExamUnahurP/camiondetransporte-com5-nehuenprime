@@ -66,7 +66,7 @@ object contenedorPortuario{
             return 0
         }
         else {
-            return contenedor.max({ objeto => objeto.peligrosidad()})
+            return contenedor.max({ objeto => objeto.peligrosidad()}).peligrosidad()
         }
     }
     method peso(){
@@ -77,18 +77,22 @@ object contenedorPortuario{
 object residuoRadiactivo{
     var pesoActual = 0
 
-    method peso = pesoActual
-    method peligrosidad = 200
+    method peso() = pesoActual
+    method peligrosidad() = 200
+    method cambiarPeso(nuevoPeso){
+        pesoActual = nuevoPeso
+    }
 }
 
 object embalajeDeSeguridad{
-    var cobertura = []
+    var cobertura = knightRider
 
     method peso(){
-        return cobertura.first([c => c.peso()])
+        return cobertura.peso()
     }
     method peligrosidad(){
-        return cobertura.first({c => c.peligrosidad() % 2 })
+        return cobertura.peligrosidad() % 2 
+    }
 }
 
 

@@ -20,4 +20,5 @@ object camion {
     method elPrimeroEsPeligroso(nivelDePeligrosidad){
         return cargas.find({cosa => cosa.peligrosidad() == nivelDePeligrosidad})
     }
+    
 }
