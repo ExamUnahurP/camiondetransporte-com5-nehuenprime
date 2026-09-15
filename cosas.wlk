@@ -18,7 +18,13 @@ object bumbleblee{
 }
 
 object paqueteDeLadrillos{
-    method peso() = 2
+    var cantLadrillos = 0
+
+    method peso() = cantLadrillos * 2 
     method peligrosidad() = 2
+    method cantidad(valor) {
+        cantLadrillos = valor
+    } 
+    
     
 }
