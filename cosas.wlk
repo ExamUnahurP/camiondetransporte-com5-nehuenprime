@@ -28,3 +28,40 @@ object paqueteDeLadrillos{
     
     
 }
+
+object arenaAGranel{
+    var pesoActual = 0
+    method peso() = pesoActual
+    method peligrosidad() = 1
+    method nuevoPeso(nuevo){
+        pesoActual = nuevo
+    }
+
+}
+
+
+object bateriaAntiaerea{
+    var estaConMisiles = true 
+
+    method peso(){
+        if(estaConMisiles){
+            return 300
+        }else{
+            return 200
+        }
+    }
+    method peligrosidad(){
+        if(estaConMisiles){
+            return 300
+        }else{
+            return 200
+        }
+    }
+}
+
+object contenedorPortuario{
+    
+}
+
+
+
