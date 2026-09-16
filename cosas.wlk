@@ -52,9 +52,9 @@ object bateriaAntiaerea{
     }
     method peligrosidad(){
         if(estaConMisiles){
-            return 300
+            return 100
         }else{
-            return 200
+            return 0
         }
     }
 }
